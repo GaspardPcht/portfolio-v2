@@ -11,7 +11,7 @@ export default function Header() {
         </div>
 
         {/* Navigation Links */}
-        <div className="flex gap-5  hidden md:flex items-center flex-1 justify-end md:mr-4">
+        <div className="sm:flex gap-5 hidden md:flex items-center flex-1 justify-end md:mr-4">
           <div className="flex items-center justify-start font-khula font-extrabold opacity-30 text-3xl text-[#EAEAEA] lg:ml-10">
             ABOUT
           </div>
