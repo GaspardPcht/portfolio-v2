@@ -51,7 +51,7 @@ export default function Header({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: index * 0.2 }}
           >
-            <span className="flex items-center justify-start font-khula font-extrabold opacity-50 text-3xl lg:mr-10 text-[#EAEAEA] hover:opacity-100">
+            <span className="flex items-center justify-start font-khula font-extrabold opacity-50 text-3xl  text-[#EAEAEA] hover:opacity-100">
               {item}
             </span>
           </motion.div>
