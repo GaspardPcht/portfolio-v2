@@ -61,8 +61,8 @@ export default function About() {
           <Image
             src="/assets/me.png"
             alt="ME"
-            width={300} // Gardez la largeur pour mobile
-            height={300} // Gardez la hauteur pour mobile
+            width={300} 
+            height={300}
             priority={true}
             className="rounded-md w-[200px] h-[250px] md:w-[300px] md:h-[400px] "
           />
