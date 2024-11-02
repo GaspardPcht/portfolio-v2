@@ -22,10 +22,9 @@ export default function About() {
   });
 
     const sectionsRef = {
-      langues: useRef<HTMLDivElement>(null),
-      about: useRef<HTMLDivElement>(null),
-      project: useRef<HTMLDivElement>(null),
-      contact: useRef<HTMLDivElement>(null),
+      ABOUT: useRef<HTMLDivElement>(null),
+      WORK: useRef<HTMLDivElement>(null),
+      CONTACT: useRef<HTMLDivElement>(null),
     };
 
     const scrollToSection = (section: keyof typeof sectionsRef) => {
@@ -48,9 +47,9 @@ export default function About() {
       </div>
 
       <Header
-        scrollToAbout={() => scrollToSection("about")}
-        scrollToProject={() => scrollToSection("project")}
-        scrollToContact={() => scrollToSection("contact")}
+        scrollToAbout={() => scrollToSection("ABOUT")}
+        scrollToWork={() => scrollToSection("WORK")}
+        scrollToContact={() => scrollToSection("CONTACT")}
       />
 
       {/* Flex Container for Image and Text */}
@@ -82,12 +81,12 @@ export default function About() {
           className="border-[1px] border-[#FF8C00] text-center flex items-center justify-center lg:w-[60vh] md:w-[40vh] w-[30vh] p-3 rounded-md lg:mt-[-300px] md:mt-8 mt-6 lg:ml-[100px] "
         >
           <p className="md:text-lg text-sm">
-            I'm web and mobile developer based in France.
-            Passionate about technology, I specialize in building responsive
-            websites and mobile applications that focus on user experience and
-            functionality. With a strong foundation in modern web technologies
-            and mobile frameworks, I enjoy turning ideas into digital solutions
-            and continuously improving my skills in this fast-evolving industry.
+            I'm web and mobile developer based in France. Passionate about
+            technology, I specialize in building responsive websites and mobile
+            applications that focus on user experience and functionality. With a
+            strong foundation in modern web technologies and mobile frameworks,
+            I enjoy turning ideas into digital solutions and continuously
+            improving my skills in this fast-evolving industry.
           </p>
         </motion.div>
       </div>

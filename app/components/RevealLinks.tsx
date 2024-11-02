@@ -4,13 +4,13 @@ import FlipLink from "./FlipLink";
 
 interface HeaderProps {
   scrollToAbout: () => void;
-  scrollToProject: () => void;
+  scrollToWork: () => void;
   scrollToContact: () => void;
 }
 
 const RevealLinks: React.FC<HeaderProps> = ({
   scrollToAbout,
-  scrollToProject,
+  scrollToWork,
   scrollToContact,
 }) => {
   return (
@@ -18,7 +18,7 @@ const RevealLinks: React.FC<HeaderProps> = ({
       <FlipLink onClick={scrollToAbout}>
         ABOUT
       </FlipLink>
-      <FlipLink  onClick={scrollToProject}>
+      <FlipLink  onClick={scrollToWork}>
         WORK
       </FlipLink>
       <FlipLink  onClick={scrollToContact}>

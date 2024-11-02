@@ -5,12 +5,14 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { IoArrowDownCircleOutline } from "react-icons/io5";
 import About from "./About/page";
+import Work from "./Work/page";
+import Contact from "./Contact/page";
 
 export default function Home() {
   const sectionsRef = {
     ABOUT: useRef<HTMLDivElement>(null),
     WORK: useRef<HTMLDivElement>(null),
-    CONTACT: useRef<HTMLDivElement>(null),
+    CONTACT: useRef<HTMLDivElement>(null), // Add contact ref if used later
   };
 
   const scrollToSection = (section: keyof typeof sectionsRef) => {
@@ -74,7 +76,7 @@ export default function Home() {
           <div className="md:mr-10">
             <RevealLinks
               scrollToAbout={() => scrollToSection("ABOUT")}
-              scrollToProject={() => scrollToSection("WORK")}
+              scrollToWork={() => scrollToSection("WORK")}
               scrollToContact={() => scrollToSection("CONTACT")}
             />
           </div>
@@ -95,6 +97,13 @@ export default function Home() {
       {/* About Section */}
       <div ref={sectionsRef.ABOUT}>
         <About />
+      </div>
+      <div ref={sectionsRef.WORK} className="md:mt-0">
+        <Work />
+      </div>
+      {/* Uncomment below if there's a contact section */}
+      <div ref={sectionsRef.CONTACT}>
+        <Contact />
       </div>
     </div>
   );

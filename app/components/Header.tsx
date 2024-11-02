@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 
 interface HeaderProps {
   readonly scrollToAbout: () => void;
-  readonly scrollToProject: () => void;
+  readonly scrollToWork: () => void;
   readonly scrollToContact: () => void;
 }
 
 export default function Header({
   scrollToAbout,
-  scrollToProject,
+  scrollToWork,
   scrollToContact,
 }: HeaderProps) {
   const scrollToTop = () => {
@@ -21,7 +21,7 @@ export default function Header({
 
   return (
     <div>
-      <header className="absolute top-0 right-0 md:right-[-10px] m-8 flex items-center justify-between w-full">
+      <header className="fixed top-0 left-0 right-0 z-10 backdrop-blur-sm bg-white bg-opacity-0 h-20 flex items-center justify-between w-full">
         {/* GASPARDPCHT Text */}
         <div
           className="flex items-center justify-start font-khula font-extrabold opacity-30 text-3xl text-[#EAEAEA] hover:opacity-100 cursor-pointer text-left ml-10"
@@ -40,7 +40,7 @@ export default function Header({
                 item === "ABOUT"
                   ? scrollToAbout
                   : item === "WORK"
-                  ? scrollToProject
+                  ? scrollToWork
                   : scrollToContact
               }
               initial={{ opacity: 0, y: 20 }}
