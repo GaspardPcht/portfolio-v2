@@ -11,7 +11,7 @@ function FlipLink({ children, href }: { children: string; href: string }) {
       initial="initial"
       whileHover="hovered"
       href={href}
-      className="relative block overflow-hidden whitespace-nowrap text-[55px] font-khula font-extrabold uppercase md:text-8xl lg:text-[150px] "
+      className="relative block overflow-hidden whitespace-nowrap text-[50px] font-khula font-extrabold uppercase md:text-[100px]  lg:text-[150px] "
       style={{
         lineHeight: 0.8,
       }}

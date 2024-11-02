@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useInView } from "react-intersection-observer";
 import Header from "../components/Header";
+import { useRef } from "react";
 
 export default function About() {
   const { ref: headerRef, inView: headerInView } = useInView({
@@ -20,6 +21,23 @@ export default function About() {
     threshold: 0.1,
   });
 
+    const sectionsRef = {
+      langues: useRef<HTMLDivElement>(null),
+      about: useRef<HTMLDivElement>(null),
+      project: useRef<HTMLDivElement>(null),
+      contact: useRef<HTMLDivElement>(null),
+    };
+
+    const scrollToSection = (section: keyof typeof sectionsRef) => {
+      const ref = sectionsRef[section].current;
+      if (ref) {
+        window.scrollTo({
+          top: ref.offsetTop,
+          behavior: "smooth",
+        });
+      }
+    };
+
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center">
       {/* Main Text */}
@@ -29,10 +47,14 @@ export default function About() {
         </span>
       </div>
 
-<Header/>
+      <Header
+        scrollToAbout={() => scrollToSection("about")}
+        scrollToProject={() => scrollToSection("project")}
+        scrollToContact={() => scrollToSection("contact")}
+      />
 
       {/* Flex Container for Image and Text */}
-      <div className="flex flex-col lg:flex-row items-center justify-center mt-[6vh]"> 
+      <div className="flex flex-col lg:flex-row items-center justify-center mt-[6vh]">
         {/* Image Section */}
         <motion.div
           ref={imageRef1}
@@ -57,7 +79,7 @@ export default function About() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: textInView ? 1 : 0, scale: textInView ? 1 : 0.8 }}
           transition={{ delay: 0.7, duration: 0.5 }}
-          className="border-[1px] border-[#FF8C00] text-center flex items-center justify-center lg:w-[60vh] md:w-[40vh] w-[30vh] p-3 rounded-xl mt-8 " 
+          className="border-[1px] border-[#FF8C00] text-center flex items-center justify-center lg:w-[60vh] md:w-[40vh] w-[30vh] p-3 rounded-xl mt-8 "
         >
           <p className="md:text-lg text-sm ">
             I am a 23-year-old web and mobile developer based in France.

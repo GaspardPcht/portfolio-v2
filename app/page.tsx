@@ -22,7 +22,7 @@ export default function Home() {
     <div>
       <div className="relative min-h-screen">
         {/* Main Text */}
-        <div className="absolute left-[5vw] md:left-[4vw] lg:left-[2vw] top-[50%] transform -translate-y-1/2 -translate-x-1/2 pl-2">
+        <div className="absolute left-[3vw] md:left-[3vw] lg:left-[2vw] top-[50%] transform -translate-y-1/2 -translate-x-1/2 pl-2">
           <span className="flex text-[64px] md:text-[96px] opacity-20 font-bold font-khula text-[#EAEAEA] stroke-black stroke-1 rotate-90">
             GASPARDPCHT
           </span>
