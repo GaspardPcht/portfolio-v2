@@ -46,11 +46,7 @@ export default function About() {
         </span>
       </div>
 
-      <Header
-        scrollToAbout={() => scrollToSection("ABOUT")}
-        scrollToWork={() => scrollToSection("WORK")}
-        scrollToContact={() => scrollToSection("CONTACT")}
-      />
+ 
 
       {/* Flex Container for Image and Text */}
       <div className="flex flex-col lg:flex-row items-center justify-center mt-[6vh]">

@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import RevealLinks from "./components/RevealLinks";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -7,13 +7,23 @@ import { IoArrowDownCircleOutline } from "react-icons/io5";
 import About from "./About/page";
 import Work from "./Work/page";
 import Contact from "./Contact/page";
+import Header from "./components/Header";
+
+type Section = "ABOUT" | "WORK" | "CONTACT" | null;
 
 export default function Home() {
   const sectionsRef = {
     ABOUT: useRef<HTMLDivElement>(null),
     WORK: useRef<HTMLDivElement>(null),
-    CONTACT: useRef<HTMLDivElement>(null), // Add contact ref if used later
+    CONTACT: useRef<HTMLDivElement>(null),
   };
+
+  const [visibleSection, setVisibleSection] = useState<Section>(null);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // Définir isClient à true côté client seulement
+  }, []);
 
   const scrollToSection = (section: keyof typeof sectionsRef) => {
     const ref = sectionsRef[section].current;
@@ -25,6 +35,32 @@ export default function Home() {
     }
   };
 
+  useEffect(() => {
+    if (!isClient) return;
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 4;
+
+      let currentSection: Section = null; // Modifié pour être de type Section
+      Object.entries(sectionsRef).forEach(([key, ref]) => {
+        if (
+          ref.current &&
+          ref.current.offsetTop <= scrollPosition &&
+          ref.current.offsetTop + ref.current.offsetHeight > scrollPosition
+        ) {
+          currentSection = key as Section; // currentSection est maintenant de type Section
+        }
+      });
+
+      setVisibleSection(currentSection); // Assignation directe à setVisibleSection
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Appel initial pour définir la section visible
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [isClient, sectionsRef]);
+
   return (
     <div>
       <div className="relative min-h-screen">
@@ -34,6 +70,16 @@ export default function Home() {
             GASPARDPCHT
           </span>
         </div>
+
+        {/* Conditionally Rendered Header */}
+        {isClient &&
+          ["ABOUT", "WORK", "CONTACT"].includes(visibleSection!) && ( // Ajout d'un "!" pour dire à TypeScript que visibleSection n'est pas null ici
+            <Header
+              scrollToAbout={() => scrollToSection("ABOUT")}
+              scrollToWork={() => scrollToSection("WORK")}
+              scrollToContact={() => scrollToSection("CONTACT")}
+            />
+          )}
 
         {/* Icons and Links Section */}
         <header className="absolute top-0 right-0 md:right-[-10px] m-8 flex flex-col items-center">
@@ -72,15 +118,17 @@ export default function Home() {
         </header>
 
         {/* RevealLinks Component */}
-        <main className="absolute right-0 lg:top-[15%] md:top-[35%] top-[35%]">
-          <div className="md:mr-10">
-            <RevealLinks
-              scrollToAbout={() => scrollToSection("ABOUT")}
-              scrollToWork={() => scrollToSection("WORK")}
-              scrollToContact={() => scrollToSection("CONTACT")}
-            />
-          </div>
-        </main>
+        {isClient && (
+          <main className="absolute right-0 lg:top-[15%] md:top-[35%] top-[35%]">
+            <div className="md:mr-10">
+              <RevealLinks
+                scrollToAbout={() => scrollToSection("ABOUT")}
+                scrollToWork={() => scrollToSection("WORK")}
+                scrollToContact={() => scrollToSection("CONTACT")}
+              />
+            </div>
+          </main>
+        )}
 
         {/* Scroll to About Button */}
         <button
@@ -101,7 +149,7 @@ export default function Home() {
       <div ref={sectionsRef.WORK} className="md:mt-0">
         <Work />
       </div>
-      {/* Uncomment below if there's a contact section */}
+      {/* Contact Section */}
       <div ref={sectionsRef.CONTACT}>
         <Contact />
       </div>
