@@ -79,10 +79,10 @@ export default function About() {
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: textInView ? 1 : 0, scale: textInView ? 1 : 0.8 }}
           transition={{ delay: 0.7, duration: 0.5 }}
-          className="border-[1px] border-[#FF8C00] text-center flex items-center justify-center lg:w-[60vh] md:w-[40vh] w-[30vh] p-3 rounded-xl mt-8 "
+          className="border-[1px] border-[#FF8C00] text-center flex items-center justify-center lg:w-[60vh] md:w-[40vh] w-[30vh] p-3 rounded-md lg:mt-[-300px] md:mt-8 mt-6 lg:ml-[100px] "
         >
-          <p className="md:text-lg text-sm ">
-            I am a 23-year-old web and mobile developer based in France.
+          <p className="md:text-lg text-sm">
+            I'm web and mobile developer based in France.
             Passionate about technology, I specialize in building responsive
             websites and mobile applications that focus on user experience and
             functionality. With a strong foundation in modern web technologies

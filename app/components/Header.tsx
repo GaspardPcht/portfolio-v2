@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { motion } from "framer-motion";
 
 interface HeaderProps {
@@ -12,11 +12,21 @@ export default function Header({
   scrollToProject,
   scrollToContact,
 }: HeaderProps) {
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", 
+    });
+  };
+
   return (
     <div>
       <header className="absolute top-0 right-0 md:right-[-10px] m-8 flex items-center justify-between w-full">
         {/* GASPARDPCHT Text */}
-        <div className="flex items-center justify-start font-khula font-extrabold opacity-30 text-3xl text-[#EAEAEA] hover:opacity-100 cursor-pointer text-left ml-10">
+        <div
+          className="flex items-center justify-start font-khula font-extrabold opacity-30 text-3xl text-[#EAEAEA] hover:opacity-100 cursor-pointer text-left ml-10"
+          onClick={scrollToTop} // Add onClick to scroll to top
+        >
           GASPARDPCHT
         </div>
 
@@ -40,7 +50,6 @@ export default function Header({
               <span className="flex items-center justify-start font-khula font-extrabold opacity-30 text-3xl text-[#EAEAEA] hover:opacity-100">
                 {item}
               </span>
-              {/* Barre animée en dessous */}
             </motion.div>
           ))}
         </div>

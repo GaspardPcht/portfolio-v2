@@ -7,12 +7,17 @@ import { IoArrowDownCircleOutline } from "react-icons/io5";
 import About from "./About/page";
 
 export default function Home() {
-  const aboutRef = useRef<HTMLDivElement>(null);
+  const sectionsRef = {
+    ABOUT: useRef<HTMLDivElement>(null),
+    WORK: useRef<HTMLDivElement>(null),
+    CONTACT: useRef<HTMLDivElement>(null),
+  };
 
-  const scrollToAbout = () => {
-    if (aboutRef.current) {
+  const scrollToSection = (section: keyof typeof sectionsRef) => {
+    const ref = sectionsRef[section].current;
+    if (ref) {
       window.scrollTo({
-        top: aboutRef.current.offsetTop,
+        top: ref.offsetTop,
         behavior: "smooth",
       });
     }
@@ -67,13 +72,17 @@ export default function Home() {
         {/* RevealLinks Component */}
         <main className="absolute right-0 lg:top-[15%] md:top-[35%] top-[35%]">
           <div className="md:mr-10">
-            <RevealLinks />
+            <RevealLinks
+              scrollToAbout={() => scrollToSection("ABOUT")}
+              scrollToProject={() => scrollToSection("WORK")}
+              scrollToContact={() => scrollToSection("CONTACT")}
+            />
           </div>
         </main>
 
         {/* Scroll to About Button */}
         <button
-          onClick={scrollToAbout}
+          onClick={() => scrollToSection("ABOUT")}
           className="flex flex-col justify-center items-center absolute bottom-[3vh] right-[45%] md:right-[50%] transform -translate-x-1/2 cursor-pointer animate-bounce bg-transparent border-none hover:bg-transparent text-[#FF8C00]"
           aria-label="Scroll to About section"
         >
@@ -82,7 +91,9 @@ export default function Home() {
           </div>
         </button>
       </div>
-      <div ref={aboutRef}>
+
+      {/* About Section */}
+      <div ref={sectionsRef.ABOUT}>
         <About />
       </div>
     </div>

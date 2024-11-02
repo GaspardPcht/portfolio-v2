@@ -5,13 +5,19 @@ import { motion } from "framer-motion";
 const DURATION = 0.25;
 const STAGGER = 0.025;
 
-function FlipLink({ children, href }: { children: string; href: string }) {
+interface FlipLinkProps {
+  children: string;
+
+  onClick?: () => void; // Make onClick an optional function prop
+}
+
+const FlipLink: React.FC<FlipLinkProps> = ({ children, onClick }) => {
   return (
     <motion.a
       initial="initial"
       whileHover="hovered"
-      href={href}
-      className="relative block overflow-hidden whitespace-nowrap text-[50px] font-khula font-extrabold uppercase md:text-[100px]  lg:text-[150px] "
+      onClick={onClick} // Use onClick prop here
+      className="relative block overflow-hidden whitespace-nowrap text-[50px] font-khula font-extrabold uppercase md:text-[100px] lg:text-[150px] cursor-pointer"
       style={{
         lineHeight: 0.8,
       }}
@@ -68,6 +74,6 @@ function FlipLink({ children, href }: { children: string; href: string }) {
       </div>
     </motion.a>
   );
-}
+};
 
 export default FlipLink;
