@@ -8,6 +8,7 @@ interface CardProps {
   height?: string;
   genres: string[];
   opacity?: number;
+  link: string; // Added link prop for the button
 }
 
 const Card: React.FC<CardProps> = ({
@@ -18,8 +19,9 @@ const Card: React.FC<CardProps> = ({
   height = "h-80",
   genres,
   opacity = 0.35,
+  link, // Destructure the link prop
 }) => {
-  // Fonction pour grouper les genres par trois
+  // Function to group genres by three
   const groupGenres = (genres: string[]) => {
     const grouped: string[][] = [];
     for (let i = 0; i < genres.length; i += 3) {
@@ -32,7 +34,7 @@ const Card: React.FC<CardProps> = ({
     <div
       className={`border-[1px] border-[#2C2C2C] hover:border-[#FF8C00] card ${width} ${height} group relative flex justify-end flex-col p-[0.3em] z-[1] overflow-hidden`}
     >
-      {/* Conteneur pour l'image de fond avec opacité */}
+      {/* Background image container with opacity */}
       <div
         className="absolute top-0 left-0 h-full w-full"
         style={{
@@ -44,7 +46,7 @@ const Card: React.FC<CardProps> = ({
         }}
       ></div>
 
-      {/* Conteneur avec flou par défaut */}
+      {/* Default backdrop blur container */}
       <div className="absolute top-0 left-0 h-full w-full backdrop-blur-lg transition-all hover:backdrop-blur-lg"></div>
 
       <div className="container text-[#EAEAEA] relative font-khula flex flex-col gap-[0.5em]">
@@ -54,7 +56,7 @@ const Card: React.FC<CardProps> = ({
           </h1>
         </div>
 
-        {/* Afficher les genres en groupes de 3 */}
+        {/* Display genres in groups of 3 */}
         {groupGenres(genres).map((group, index) => (
           <div
             key={index}
@@ -75,9 +77,13 @@ const Card: React.FC<CardProps> = ({
       <p className="font-khula block text-[#EAEAEA] relative h-[0em] group-hover:h-[275px] leading-[1.2em] duration-500 overflow-hidden mt-3">
         {text}
       </p>
-      <button className="font-khula block text-[#EAEAEA] relative h-[0em] group-hover:h-[275px] leading-[1.2em] duration-500 overflow-hidden mt-3">
+
+      <a
+        href={link}
+        className="font-khula block text-[#EAEAEA] relative h-[0em] group-hover:h-[275px] leading-[1.2em] duration-500 overflow-hidden mt-3"
+      >
         <p>View All</p>
-      </button>
+      </a>
     </div>
   );
 };

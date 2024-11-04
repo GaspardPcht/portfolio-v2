@@ -2,6 +2,7 @@ import { useState } from "react";
 import CardForWork from "../components/CardsForWork";
 import Modal from "../components/ModalForWork";
 import Card from "../components/Cards";
+import { link } from "fs";
 
 // Define the structure for project data
 interface Project {
@@ -16,13 +17,6 @@ interface Project {
 }
 
 export default function Work() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null); 
-
-  const openModal = (project: Project) => {
-    setSelectedProject(project); // Update selected project
-    setIsModalOpen(true);
-  };
 
   const projects: Project[] = [
     {
@@ -64,7 +58,7 @@ export default function Work() {
       title: "FLOWSTUDIO",
       text: "FlowStudio is a website for a Pole Dance studio, designed with Figma and developed with WordPress. The site features a modern interface with functionalities such as online booking, course listings, pricing details, and an overview of the studio and its team",
       frontend: "WordPress",
-      backend: " ",
+      backend: " Elementor",
       functionalities:
         "Online booking, Course listings, Pricing lists, Studio and team presentation",
       projetURL: "https://poledancewithme.wordpress.com/",
@@ -132,21 +126,10 @@ export default function Work() {
               ...project.frontend.split(", "),
               ...project.backend.split(", "),
             ]}
+            link={project.projetURL}
           />
         ))}
       </div>
-      {/* Modal */}
-      {selectedProject && (
-        <Modal
-          isOpen={isModalOpen}
-          setIsOpen={setIsModalOpen}
-          title={selectedProject.title}
-          frontend={selectedProject.frontend}
-          backend={selectedProject.backend}
-          functionalities={selectedProject.functionalities}
-          projetURL={selectedProject.projetURL}
-        />
-      )}
     </div>
   );
 }
