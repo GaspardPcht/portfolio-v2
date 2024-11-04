@@ -20,7 +20,7 @@ export default function Header({
   };
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-10 bg-gradient-to-b from-[#121212] to-transparent backdrop-blur-[2px] h-24 flex items-center justify-between w-full">
+    <header className="fixed top-0 left-0 right-0 z-10 bg-gradient-to-b from-[#121212] to-transparent backdrop-blur-[2px] h-20 flex items-center justify-between w-full">
       <div
         className="flex items-center justify-start font-khula font-extrabold opacity-50 text-3xl text-[#EAEAEA] hover:opacity-100 cursor-pointer text-left ml-10"
         onClick={scrollToTop} // Add onClick to scroll to top
