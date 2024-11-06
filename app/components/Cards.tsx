@@ -9,7 +9,7 @@ interface CardProps {
   height?: string;
   genres: string[];
   opacity?: number;
-  link: string; // Added link prop for the button
+  link: string;
 }
 
 const Card: React.FC<CardProps> = ({
@@ -20,7 +20,7 @@ const Card: React.FC<CardProps> = ({
   height = "h-80",
   genres,
   opacity = 0.35,
-  link, // Destructure the link prop
+  link,
 }) => {
   // Function to group genres by three
   const groupGenres = (genres: string[]) => {
@@ -51,28 +51,30 @@ const Card: React.FC<CardProps> = ({
       <div className="absolute top-0 left-0 h-full w-full backdrop-blur-lg transition-all hover:backdrop-blur-lg"></div>
 
       <div className="container text-[#EAEAEA] relative font-khula flex flex-col gap-[0.5em]">
-        <div className="h-fit w-full">
+        <div className="h-12 w-full flex items-center">
           <h1 className="font-khula text-[#EAEAEA] font-bold text-[1.5em] ">
             {title}
           </h1>
         </div>
 
-        {/* Display genres in groups of 3 */}
-        {groupGenres(genres).map((group, index) => (
-          <div
-            key={index}
-            className="flex justify-start items-center h-fit gap-[0.2em]"
-          >
-            {group.map((genre) => (
-              <div
-                key={genre}
-                className="border border-[#EAEAEA] rounded-md text-[#EAEAEA] font-khula text-[1em] font-normal px-[0.5em] py-[0.05em] opacity-70 hover:bg-[#FF8C00] hover:text-[#222222] duration-300 cursor-pointer"
-              >
-                <p>{genre}</p>
-              </div>
-            ))}
-          </div>
-        ))}
+        {/* Conteneur de genres avec hauteur fixe */}
+        <div className="h-14 overflow-hidden">
+          {groupGenres(genres).map((group, index) => (
+            <div
+              key={index}
+              className="flex justify-start items-center h-fit gap-[0.3em] mb-1"
+            >
+              {group.map((genre) => (
+                <div
+                  key={genre}
+                  className="border border-[#EAEAEA] rounded-md text-[#EAEAEA] font-khula text-[15px] font-normal px-[0.5em] py-[0.05em] opacity-70 hover:bg-[#FF8C00] hover:text-[#222222] duration-300 cursor-pointer"
+                >
+                  <p>{genre}</p>
+                </div>
+              ))}
+            </div>
+          ))}
+        </div>
       </div>
 
       <p className="font-khula block text-[#EAEAEA] relative h-[0em] group-hover:h-[275px] leading-[1.2em] duration-500 overflow-hidden mt-3">
