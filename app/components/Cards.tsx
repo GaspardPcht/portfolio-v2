@@ -1,4 +1,5 @@
 import React from "react";
+import { HiOutlineArrowSmRight } from "react-icons/hi";
 
 interface CardProps {
   backgroundImage: string;
@@ -51,7 +52,7 @@ const Card: React.FC<CardProps> = ({
 
       <div className="container text-[#EAEAEA] relative font-khula flex flex-col gap-[0.5em]">
         <div className="h-fit w-full">
-          <h1 className="font-khula text-[#EAEAEA] font-bold text-[1.5em]">
+          <h1 className="font-khula text-[#EAEAEA] font-bold text-[1.5em] ">
             {title}
           </h1>
         </div>
@@ -65,7 +66,7 @@ const Card: React.FC<CardProps> = ({
             {group.map((genre) => (
               <div
                 key={genre}
-                className="border border-[#EAEAEA] rounded-md text-[#EAEAEA] font-khula text-[1em] font-normal px-[0.5em] py-[0.05em] hover:bg-white hover:text-[#222222] duration-300 cursor-pointer"
+                className="border border-[#EAEAEA] rounded-md text-[#EAEAEA] font-khula text-[1em] font-normal px-[0.5em] py-[0.05em] opacity-70 hover:bg-[#FF8C00] hover:text-[#222222] duration-300 cursor-pointer"
               >
                 <p>{genre}</p>
               </div>
@@ -80,9 +81,12 @@ const Card: React.FC<CardProps> = ({
 
       <a
         href={link}
-        className="font-khula block text-[#EAEAEA] relative h-[0em] group-hover:h-[275px] leading-[1.2em] duration-500 overflow-hidden mt-3"
+        className="font-khula flex text-[#EAEAEA] justify-center relative top-10 h-[0em] group-hover:h-[275px] leading-[1.2em] duration-500 overflow-hidden"
       >
-        <p>View All</p>
+        <div className="text-mg gap-1 flex items-center mb-10 hover:text-[#FF8C00] ">
+          <p>View</p>
+          <HiOutlineArrowSmRight size={20} />
+        </div>
       </a>
     </div>
   );
