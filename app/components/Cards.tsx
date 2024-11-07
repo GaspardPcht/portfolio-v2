@@ -50,7 +50,7 @@ const Card: React.FC<CardProps> = ({
       {/* Default backdrop blur container */}
       <div className="absolute top-0 left-0 h-full w-full backdrop-blur-lg transition-all hover:backdrop-blur-lg"></div>
 
-      <div className="container text-[#EAEAEA] relative font-khula flex flex-col gap-[0.5em]">
+      <div className="container text-[#EAEAEA] relative font-khula flex flex-col">
         <div className="h-12 w-full flex items-center">
           <h1 className="font-khula text-[#EAEAEA] font-bold text-[1.5em] ">
             {title}
