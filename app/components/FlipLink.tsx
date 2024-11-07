@@ -17,7 +17,7 @@ const FlipLink: React.FC<FlipLinkProps> = ({ children, onClick }) => {
       initial="initial"
       whileHover="hovered"
       onClick={onClick} // Use onClick prop here
-      className="relative block overflow-hidden whitespace-nowrap text-[50px] font-khula font-extrabold uppercase md:text-[100px] lg:text-[150px] cursor-pointer"
+      className="relative block overflow-hidden movement whitespace-nowrap text-[50px] font-khula font-extrabold uppercase md:text-[100px] lg:text-[150px] cursor-pointer"
       style={{
         lineHeight: 0.8,
       }}

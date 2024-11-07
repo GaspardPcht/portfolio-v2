@@ -62,7 +62,7 @@ export default function Work() {
       functionalities:
         "Online booking, Course listings, Pricing lists, Studio and team presentation",
       projetURL: "https://poledancewithme.wordpress.com/",
-      backgroundImage: "./assets/4.png",
+      backgroundImage: "./assets/6.png",
     },
     {
       id: "HackaTweet",
@@ -82,7 +82,7 @@ export default function Work() {
       backend: "Node, Express, Mongoose",
       functionalities: "Article reading, Account creation, Add to favorites",
       projetURL: "https://morning-news-front-beige.vercel.app/",
-      backgroundImage: "./assets/6.png",
+      backgroundImage: "./assets/4.png",
     },
     {
       id: "WeatherApp",

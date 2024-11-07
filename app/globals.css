@@ -1,8 +1,13 @@
+/* Base Tailwind setup */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Khula:wght@400;700&display=swap');
 
+/* Import des polices */
+@import url('https://fonts.googleapis.com/css2?family=Khula:wght@400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css');
+
+/* Variables CSS pour le mode clair et sombre */
 :root {
   --background: #fff;
   --foreground: #121212;
@@ -15,8 +20,25 @@
   }
 }
 
+/* Style de base pour le body */
 body {
   color: var(--foreground);
-  background: var(--background);
-  font-family: 'Khula', Arial, Helvetica, sans-serif; 
+  background-color: var(--background);
+  font-family: 'Khula', Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Classe pour les transitions universelles */
+.mouvement {
+  transition: all 0.3s ease; /* Standard */
+  -moz-transition: all 0.3s ease; /* Firefox */
+  -webkit-transition: all 0.3s ease; /* Chrome, Safari, Opera */
+}
+
+/* Mode sombre */
+@media (prefers-color-scheme: dark) {
+  body {
+    color: var(--foreground);
+    background-color: var(--background);
+  }
 }
