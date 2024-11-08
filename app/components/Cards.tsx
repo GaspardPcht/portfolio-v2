@@ -9,7 +9,7 @@ interface CardProps {
   height?: string;
   genres: string[];
   opacity?: number;
-  link: string;
+href: string
 }
 
 const Card: React.FC<CardProps> = ({
@@ -20,7 +20,7 @@ const Card: React.FC<CardProps> = ({
   height = "h-72", 
   genres,
   opacity = 0.35,
-  link,
+href
 }) => {
   // Function to group genres by three
   const groupGenres = (genres: string[]) => {
@@ -82,7 +82,8 @@ const Card: React.FC<CardProps> = ({
       </p>
 
       <a
-        href={link}
+        href={href}
+        target="_blank" // Ouvrir dans un nouvel onglet
         className="font-khula flex text-[#EAEAEA] justify-center relative top-10 h-[0em] group-hover:h-[275px] leading-[1.2em] duration-500 overflow-hidden"
       >
         <div className="text-mg gap-1 flex items-center mb-10 hover:text-[#FF8C00] ">

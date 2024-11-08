@@ -116,7 +116,7 @@ export default function Work() {
               ...project.frontend.split(", "),
               ...project.backend.split(", "),
             ]}
-            link={project.projetURL}
+            href={project.projetURL}
           />
         ))}
       </div>
