@@ -76,7 +76,7 @@ export default function About() {
           transition={{ delay: 0.7, duration: 0.5 }}
           className="border-[1px] border-[#FF8C00] text-center flex items-center justify-center lg:w-[60vh] md:w-[40vh] w-[30vh] p-3 rounded-md lg:mt-[-300px] md:mt-8 mt-6 lg:ml-[100px] "
         >
-          <p className="md:text-lg text-sm">
+          <p className="md:text-lg text-sm text-[#EAEAEA]">
             I'm web and mobile developer based in France. Passionate about
             technology, I specialize in building responsive websites and mobile
             applications that focus on user experience and functionality. With a
