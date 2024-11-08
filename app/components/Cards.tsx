@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({
   title,
   text,
   width = "w-64",
-  height = "h-80",
+  height = "h-72", 
   genres,
   opacity = 0.35,
   link,

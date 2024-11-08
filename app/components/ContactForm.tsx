@@ -94,7 +94,7 @@ const ContactForm: React.FC = () => {
       </div>
       <div className="mb-4">
         <label
-          className="blocktext-[#EAEAEA] text-sm font-bold mb-2"
+          className="block text-[#EAEAEA] text-sm font-bold mb-2 "
           htmlFor="message"
         >
           Message
