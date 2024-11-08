@@ -35,7 +35,7 @@ export default function Header({
       </div>
 
       {/* Navigation Links */}
-      <div className="sm:flex gap-5 lg:gap-24 hidden md:flex items-center flex-1 justify-end md:mr-4">
+      <div className="sm:flex gap-5 lg:gap-24 hidden md:flex items-center flex-1 justify-end lg:mr-10 md:mr-4">
         {["ABOUT", "WORK", "CONTACT"].map((item, index) => (
           <motion.div
             key={item}
