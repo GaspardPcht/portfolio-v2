@@ -8,7 +8,6 @@ import { link } from "fs";
 interface Project {
   id: string;
   title: string;
-  text: string;
   frontend: string;
   backend: string;
   functionalities: string;
@@ -22,7 +21,6 @@ export default function Work() {
     {
       id: "dogAround",
       title: "DOGAROUND",
-      text: "Dog Around is a mobile application that allows users to schedule dog walks. It features a messaging system for communication between users, a geolocation feature to find nearby walks, and a location filtering system to help users select the best spots for their pets, creating a community of dog lovers.",
       frontend: "RN, Expo, Redux,",
       backend: "Express, Node, Mongoose",
       functionalities:
@@ -34,7 +32,7 @@ export default function Work() {
     {
       id: "songIQ",
       title: "SONGIQ",
-      text: "SongIQ is a web application that challenges users’ knowledge of music through a blind test game format. It features an interactive leaderboard, secure user login, and integration with the Spotify API to retrieve and filter tracks by genre, providing an immersive and customized musical experience.",
+    
       frontend: "React, Redux, Tailwind",
       backend: "Express, Node, Mongoose",
       functionalities:
@@ -45,7 +43,6 @@ export default function Work() {
     {
       id: "netflux",
       title: "NETFLUX",
-      text: "Movies is a web application that allows users to view real-time movie listings at cinemas, leveraging the Movie/TMDB API. Developed with React, the app provides features for liking and rating movies, viewing user reviews, and accessing comprehensive movie ratings. The backend is built with Node.js, Express.js, and Mongoose, ensuring a smooth and responsive user experience.",
       frontend: "React, Next.js",
       backend: "Node, Express, Mongoose",
       functionalities:
@@ -56,7 +53,6 @@ export default function Work() {
     {
       id: "flowStudio",
       title: "FLOWSTUDIO",
-      text: "FlowStudio is a website for a Pole Dance studio, designed with Figma and developed with WordPress. The site features a modern interface with functionalities such as online booking, course listings, pricing details, and an overview of the studio and its team",
       frontend: "WordPress",
       backend: " Elementor",
       functionalities:
@@ -67,7 +63,6 @@ export default function Work() {
     {
       id: "HackaTweet",
       title: "HACKATWEET",
-      text: "HackaTweet is a dynamic web application inspired by Twitter, developed with React and Next.js. It features account creation, the ability to post tweets, and support for hashtags, all powered by a robust backend using Express.js, Node.js, and Mongoose for database management.",
       frontend: "React, Next.js, Redux",
       backend: "Express, Node, Mongoose",
       functionalities: "Account creation, Tweeting, Hashtag support",
@@ -77,7 +72,6 @@ export default function Work() {
     {
       id: "Morning News",
       title: "MORNINGNEWS",
-      text: "Morning News is a comprehensive web application designed for news enthusiasts. Developed with React, Redux, and Next.js, it allows users to read articles, create accounts, and add articles to their favorites. The app is powered by a Node.js and Express.js backend, with Mongoose managing the database and Jest used for testing. It also integrates with the NEWAPI to deliver up-to-date news content.",
       frontend: "React, Redux, Next.js",
       backend: "Node, Express, Mongoose",
       functionalities: "Article reading, Account creation, Add to favorites",
@@ -87,7 +81,6 @@ export default function Work() {
     {
       id: "WeatherApp",
       title: "WEATHERAPP",
-      text: "WeatherApp is a user-friendly web application that provides real-time weather updates using the OpenWeatherApp API. Developed in Vanilla JavaScript, the app allows users to create accounts, add or remove cities from their weather dashboard, and view accurate, up-to-date weather data. The backend is powered by Node.js, Express.js, and Mongoose for efficient data management.",
       frontend: "VJ, HTML, CSS",
       backend: "Express, Node, Mongoose",
       functionalities:
@@ -96,15 +89,14 @@ export default function Work() {
       backgroundImage: "./assets/7.png",
     },
     {
-      id: "Portfolio",
+      id: "PortfolioV1",
       title: "PORTFOLIO V1",
-      text: "My frist Portfolio",
-      frontend: "React, Tailwind",
-      backend: "No Back",
-      functionalities: "",
+      frontend: "React, Next.js, Tailwind CSS",
+      backend: "No Backend",
+      functionalities: "Responsive design, Project showcase, Contact form",
       projetURL: "https://portfolio-lilac-kappa-24.vercel.app/",
       backgroundImage: "./assets/8.png",
-    },
+    }
   ];
 
   return (

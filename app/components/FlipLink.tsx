@@ -19,7 +19,7 @@ const FlipLink: React.FC<FlipLinkProps> = ({ children, onClick }) => {
       onClick={onClick} // Use onClick prop here
       className="relative block overflow-hidden movement whitespace-nowrap text-[50px] font-khula font-extrabold uppercase md:text-[100px] lg:text-[150px] cursor-pointer"
       style={{
-        lineHeight: 0.8,
+        lineHeight: 0.94,
       }}
     >
       <div>
