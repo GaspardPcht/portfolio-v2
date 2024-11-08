@@ -1,8 +1,6 @@
-import { useState } from "react";
-import CardForWork from "../components/CardsForWork";
-import Modal from "../components/ModalForWork";
+
 import Card from "../components/Cards";
-import { link } from "fs";
+
 
 // Define the structure for project data
 interface Project {

@@ -66,7 +66,7 @@ const ContactForm: React.FC = () => {
           Name
         </label>
         <input
-          className="shadow appearance-none border rounded py-2 px-3 text-[#EAEAEA] leading-tight w-full focus:outline-none focus:shadow-outline"
+          className="shadow appearance-none border rounded py-2 px-3 text-black leading-tight w-full focus:outline-none focus:shadow-outline"
           id="name"
           type="text"
           name="name"
@@ -83,7 +83,7 @@ const ContactForm: React.FC = () => {
           Email
         </label>
         <input
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-[#EAEAEA] leading-tight focus:outline-none focus:shadow-outline"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outline"
           id="email"
           type="email"
           name="email"
@@ -100,7 +100,7 @@ const ContactForm: React.FC = () => {
           Message
         </label>
         <textarea
-          className="shadow appearance-none border rounded w-full py-2 px-3 text-[#EAEAEA] leading-tight focus:outline-none focus:shadow-outlin resize-none h-48"
+          className="shadow appearance-none border rounded w-full py-2 px-3 text-black leading-tight focus:outline-none focus:shadow-outlin resize-none h-48"
           id="message"
           name="message"
           value={formData.message}
@@ -112,7 +112,7 @@ const ContactForm: React.FC = () => {
         className="flex justify-center mb-4 cursor-pointer"
         onClick={sendEmail}
       >
-        <ButtonHover href="" text="Submit"/>
+        <ButtonHover text="Submit"/>
       </div>
       {message && (
         <p
