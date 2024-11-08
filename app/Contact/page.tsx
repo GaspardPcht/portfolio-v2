@@ -1,5 +1,7 @@
 import { useRef } from 'react';
 import ContactForm from '../components/ContactForm';
+import { motion } from 'framer-motion';
+import { useInView } from 'react-intersection-observer';
 
 export default function Contact() {
   const sectionsRef = {
@@ -17,6 +19,12 @@ export default function Contact() {
       });
     }
   };
+
+  const { ref: textRef, inView: textInView } = useInView({
+    triggerOnce: true,
+    threshold: 0.1,
+  });
+
   return (
     <div className="relative min-h-screen flex flex-col items-center justify-center">
       {/* Main Text */}
@@ -25,9 +33,31 @@ export default function Contact() {
           CONTACT
         </span>
       </div>
-        <div className='flex items-center'>
+      <motion.div
+        ref={textRef}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: textInView ? 1 : 0, scale: textInView ? 1 : 0.8 }}
+        transition={{ delay: 0.7, duration: 0.5 }}
+        className="border-[1px] border-[#FF8C00] text-center flex items-center justify-center lg:w-[60vh]  md:w-[40vh] w-[30vh] p-3 rounded-md md:mt-8 mb-10 "
+      >
+        <p className="md:text-lg text-sm">
+          I would be delighted to discuss your projects or answer any questions
+          you may have. Feel free to get in touch!
+        </p>
+      </motion.div>
+      <motion.div
+        ref={textRef}
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: textInView ? 1 : 0, scale: textInView ? 1 : 0.8 }}
+        transition={{ delay: 0.7, duration: 0.5 }}
+      >
+        <div className="flex items-center">
           <ContactForm />
         </div>
+      </motion.div>
+      <footer className='absolute bottom-4 text-khula font-extrabold text-sm'>
+      <p>© 2024 GASPARDPCHT. Tous droits réservés.</p>
+      </footer>
     </div>
   );
 }

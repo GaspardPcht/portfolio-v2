@@ -2,13 +2,14 @@ import React from "react";
 
 interface ButtonHoverProps {
   href: string;
+  text: string;
 }
 
-const ButtonHover: React.FC<ButtonHoverProps> = ({ href }) => {
+const ButtonHover: React.FC<ButtonHoverProps> = ({ href, text }) => {
   return (
     <div className="grid place-content-center">
       <DrawOutlineButton onClick={() => window.open(href, "_blank")}>
-        View
+        {text}
       </DrawOutlineButton>
     </div>
   );

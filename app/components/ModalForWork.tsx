@@ -82,7 +82,7 @@ const Modal = ({
 
             {link && (
               <div className="flex justify-center mt-6">
-                <ButtonHover href={projetURL} />
+                <ButtonHover href={projetURL} text="View" />
               </div>
             )}
           </motion.div>

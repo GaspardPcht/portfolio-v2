@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
+import ButtonHover from "./ButtonHover";
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -111,6 +112,7 @@ const ContactForm: React.FC = () => {
         className="flex justify-center mb-4 cursor-pointer"
         onClick={sendEmail}
       >
+        <ButtonHover href="" text="Submit"/>
       </div>
       {message && (
         <p
