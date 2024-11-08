@@ -67,7 +67,7 @@ href
               {group.map((genre) => (
                 <div
                   key={genre}
-                  className="border border-[#EAEAEA] rounded-md text-[#EAEAEA] font-khula text-[15px] font-normal px-[0.5em] py-[0.05em] opacity-70 hover:bg-[#FF8C00] hover:text-[#222222] duration-300 cursor-pointer"
+                  className="border border-[#EAEAEA] rounded-md text-[#EAEAEA] font-khula text-[15px] font-normal px-[0.5em] py-[0.05em] opacity-70 duration-300 "
                 >
                   <p>{genre}</p>
                 </div>
