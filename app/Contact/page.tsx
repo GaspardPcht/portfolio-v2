@@ -43,7 +43,7 @@ export default function Contact() {
       >
         <p className="md:text-lg text-sm text-[#EAEAEA]">
           I would be delighted to discuss your projects or answer any questions
-          you may have. Feel free to get in touch!
+          you may have. Feel free to get in touch !
         </p>
       </motion.div>
       <motion.div
