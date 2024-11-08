@@ -30,9 +30,9 @@ body {
 
 /* Classe pour les transitions universelles */
 .mouvement {
-  transition: all 0.3s ease; /* Standard */
-  -moz-transition: all 0.3s ease; /* Firefox */
-  -webkit-transition: all 0.3s ease; /* Chrome, Safari, Opera */
+  transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease; 
+  -webkit-transition: all 0.3s ease; 
 }
 
 /* Mode sombre */
