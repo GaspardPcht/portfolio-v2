@@ -1,3 +1,4 @@
+'use client'
 import { useRef } from 'react';
 import ContactForm from '../components/ContactForm';
 import { motion } from 'framer-motion';
