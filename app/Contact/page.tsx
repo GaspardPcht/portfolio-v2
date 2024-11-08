@@ -39,7 +39,7 @@ export default function Contact() {
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: textInView ? 1 : 0, scale: textInView ? 1 : 0.8 }}
         transition={{ delay: 0.7, duration: 0.5 }}
-        className="border-[1px] border-[#FF8C00] text-center flex items-center justify-center lg:w-[60vh]  md:w-[40vh] w-[30vh] p-3 rounded-md md:mt-8 mb-10 "
+        className="border-[1px] border-[#FF8C00] text-center flex items-center justify-center lg:w-[70vh]  md:w-[40vh] w-[30vh] p-3 rounded-md md:mt-8 mb-10 "
       >
         <p className="md:text-lg text-sm text-[#EAEAEA]">
           I would be delighted to discuss your projects or answer any questions
@@ -56,7 +56,7 @@ export default function Contact() {
           <ContactForm />
         </div>
       </motion.div>
-      <footer className=' text-[#EAEAEA] absolute bottom-4 text-khula font-extrabold text-sm'>
+      <footer className=' text-[#EAEAEA] absolute bottom-2 text-khula font-extrabold text-sm'>
       <p>© 2024 GASPARDPCHT. Tous droits réservés.</p>
       </footer>
     </div>
