@@ -17,7 +17,7 @@ const FlipLinkLinear: React.FC<FlipLinkProps> = ({ children, onClick }) => {
       initial="initial"
       whileHover="hovered"
       onClick={onClick} // Use onClick prop here
-      className="relative block overflow-hidden movement whitespace-nowrap text-3xl font-khula font-extrabold uppercase cursor-pointer"
+      className="relative block overflow-hidden movement whitespace-nowrap text-3xl opacity-50 hover:opacity-90 font-khula font-extrabold uppercase cursor-pointer"
       style={{
         lineHeight: 0.94,
       }}
@@ -30,6 +30,7 @@ const FlipLinkLinear: React.FC<FlipLinkProps> = ({ children, onClick }) => {
               initial: {
                 y: 0,
                 color: "#EAEAEA",
+                opacity:50
               },
               hovered: {
                 y: "-100%",
@@ -55,6 +56,7 @@ const FlipLinkLinear: React.FC<FlipLinkProps> = ({ children, onClick }) => {
               initial: {
                 y: "100%",
                 color: "#EAEAEA",
+                opacity:50
               },
               hovered: {
                 y: 0,

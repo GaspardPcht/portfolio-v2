@@ -15,7 +15,7 @@ const RevealLinksLinear: React.FC<HeaderProps> = ({
   scrollToContact,
 }) => {
   return (
-    <section className="flex justify-center gap-10 text-[#EAEAEA]">
+    <section className="flex justify-center gap-14 text-[#EAEAEA]">
       <FlipLinkLinear onClick={scrollToAbout}>
         ABOUT
       </FlipLinkLinear>
