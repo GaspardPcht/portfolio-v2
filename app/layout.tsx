@@ -15,7 +15,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <link rel="icon" href="/assets/withmac.png" type="image/png" />
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
         {/* Open Graph Meta Tags */}
         <meta property="og:title" content="GASPARDPCHT - Web and Mobile Developer" />
