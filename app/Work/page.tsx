@@ -28,25 +28,14 @@ export default function Work() {
       backgroundImage: "./assets/1.png", // Add backgroundImage for this project
     },
     {
-      id: "songIQ",
-      title: "SONGIQ",
-    
-      frontend: "React, Redux, Tailwind",
-      backend: "Express, Node, Mongoose",
+      id: "AkRenov",
+      title: "AkRenov",
+      frontend: "React, Next.js, Tailwind",
+      backend: "No Backend",
       functionalities:
-        "Music blind test, Player leaderboard, User authentication, Spotify API integration, Genre-based filtering",
-      projetURL: "https://song-iq-front.vercel.app/",
-      backgroundImage: "./assets/2.png", // Add backgroundImage for this project
-    },
-    {
-      id: "netflux",
-      title: "NETFLUX",
-      frontend: "React, Next.js",
-      backend: "Node, Express, Mongoose",
-      functionalities:
-        "Real-time movie listings, Like and rate movies, View reviews and ratings",
-      projetURL: "https://netflux-frontend.vercel.app/",
-      backgroundImage: "./assets/3.png",
+     "Responsive design, Interactive project showcase, Dynamic project filtering, Contact form with validation",
+      projetURL: "https://ak-renov.vercel.app/",
+      backgroundImage: "./assets/7.png",
     },
     {
       id: "flowStudio",
@@ -59,6 +48,16 @@ export default function Work() {
       backgroundImage: "./assets/6.png",
     },
     {
+      id: "netflux",
+      title: "NETFLUX",
+      frontend: "React, Next.js",
+      backend: "Node, Express, Mongoose",
+      functionalities:
+        "Real-time movie listings, Like and rate movies, View reviews and ratings",
+      projetURL: "https://netflux-frontend.vercel.app/",
+      backgroundImage: "./assets/3.png",
+    },
+    {
       id: "HackaTweet",
       title: "HACKATWEET",
       frontend: "React, Next.js, Redux",
@@ -66,6 +65,17 @@ export default function Work() {
       functionalities: "Account creation, Tweeting, Hashtag support",
       projetURL: "https://hacka-tweet-front.vercel.app/",
       backgroundImage: "./assets/5.png",
+    },
+    {
+      id: "songIQ",
+      title: "SONGIQ",
+    
+      frontend: "React, Redux, Tailwind",
+      backend: "Express, Node, Mongoose",
+      functionalities:
+        "Music blind test, Player leaderboard, User authentication, Spotify API integration, Genre-based filtering",
+      projetURL: "https://song-iq-front.vercel.app/",
+      backgroundImage: "./assets/2.png", // Add backgroundImage for this project
     },
     {
       id: "Morning News",
@@ -77,19 +87,9 @@ export default function Work() {
       backgroundImage: "./assets/4.png",
     },
     {
-      id: "WeatherApp",
-      title: "WEATHERAPP",
-      frontend: "VJ, HTML, CSS",
-      backend: "Express, Node, Mongoose",
-      functionalities:
-        "Account creation, Add/Remove cities, Real-time weather updates",
-      projetURL: "https://weather-front-six.vercel.app/",
-      backgroundImage: "./assets/7.png",
-    },
-    {
       id: "PortfolioV1",
       title: "PORTFOLIO V1",
-      frontend: "React, Next.js, Tailwind CSS",
+      frontend: "React, Next.js, Tailwind",
       backend: "No Backend",
       functionalities: "Responsive design, Project showcase, Contact form",
       projetURL: "https://portfolio-lilac-kappa-24.vercel.app/",
