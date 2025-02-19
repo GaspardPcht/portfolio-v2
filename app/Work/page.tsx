@@ -1,6 +1,4 @@
-import dynamic from 'next/dynamic';
-
-const Card = dynamic(() => import('../components/Cards'), { ssr: false });
+import ProjectGrid from '../components/ProjectGrid';
 
 // Define the structure for project data
 interface Project {
@@ -107,28 +105,7 @@ export default function Work() {
         </span>
       </div>
       
-      {/* Grille de projets avec largeur maximale réduite */}
-      <div className="w-full max-w-[1200px]">
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-4 md:gap-5">
-          {projects.map((project) => (
-            <div 
-              key={project.id}
-              className="transform transition-all duration-300 hover:-translate-y-1 max-w-[280px] mx-auto w-full"
-            >
-              <Card
-                backgroundImage={project.backgroundImage}
-                title={project.title}
-                text={project.functionalities}
-                genres={[
-                  ...project.frontend.split(", "),
-                  ...project.backend.split(", "),
-                ]}
-                href={project.projetURL}
-              />
-            </div>
-          ))}
-        </div>
-      </div>
+      <ProjectGrid projects={projects} />
     </div>
   );
 }
