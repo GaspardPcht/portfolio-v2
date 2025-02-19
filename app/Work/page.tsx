@@ -1,5 +1,6 @@
-import Card from "./Cards";
+import dynamic from 'next/dynamic';
 
+const Card = dynamic(() => import('../components/Cards'), { ssr: false });
 
 // Define the structure for project data
 interface Project {
