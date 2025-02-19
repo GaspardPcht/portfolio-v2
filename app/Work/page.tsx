@@ -1,4 +1,4 @@
-import Card from "../components/Cards";
+import Card from "./Cards";
 
 
 // Define the structure for project data
