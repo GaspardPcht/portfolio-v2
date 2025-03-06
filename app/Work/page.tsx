@@ -12,8 +12,17 @@ interface Project {
 }
 
 export default function Work() {
-
+  
   const projects: Project[] = [
+    {
+      id: "NOVA",
+      title: "NOVA",
+      frontend: "React, Redux, Next.js",
+      backend: "Node, Express, Mongoose",
+      functionalities: "User authentication, Shopping cart, Secure payment, Product catalog, Category filtering, Order management",
+      projetURL: "https://nova-front-pi.vercel.app/",
+      backgroundImage: "/assets/4.png",
+    },
     {
       id: "rendezio",
       title: "RENDEZIO",
@@ -67,22 +76,12 @@ export default function Work() {
     {
       id: "songIQ",
       title: "SONGIQ",
-    
       frontend: "React, Redux, Tailwind",
       backend: "Express, Node, Mongoose",
       functionalities:
         "Music blind test, Player leaderboard, User authentication, Spotify API integration, Genre-based filtering",
       projetURL: "https://song-iq-front.vercel.app/",
       backgroundImage: "/assets/2.png",
-    },
-    {
-      id: "Morning News",
-      title: "MORNINGNEWS",
-      frontend: "React, Redux, Next.js",
-      backend: "Node, Express, Mongoose",
-      functionalities: "Article reading, Account creation, Add to favorites",
-      projetURL: "https://morning-news-front-beige.vercel.app/",
-      backgroundImage: "/assets/4.png",
     },
     {
       id: "PortfolioV1",
